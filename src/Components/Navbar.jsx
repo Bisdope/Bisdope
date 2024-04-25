@@ -1,33 +1,41 @@
+import { Link } from "react-router-dom";
+import CartIcon from "../Assets/images/cart.svg";
+import UserIcon from "../Assets/images/user.svg";
 const Navbar=() =>{
     return(
-        <nav className="navbar navbar-expand-lg bg-body-tertiary" style={{backgroundColor:'#3b5d50'}}>
-        <div className="container-fluid">
-          <div className="collapse ">
+        <nav className="navbar navbar-expand-lg " style={{backgroundColor:'#3b5d50'}}>
+      
+         
           <a className="navbar-brand" >Furni<span className="span">.</span>
           </a>
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-items">
-                <a className="nav-link active">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link">Shop</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link ">About us</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link ">Services</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link ">Blog</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link ">Contact us</a>
-              </li>
-            </ul>
+          <div className="right-nav">
+                <ul className="nav-links">
+                    <li>
+                        <Link to="/" className="links"> Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/shop" className="link"> Shop</Link>
+                    </li>
+                    <li>
+                        <Link to="/"  className="link"> About us</Link>
+                    </li>
+                    <li>
+                        <Link to="/"  className="link"> Services</Link>
+                    </li>
+                    <li>
+                        <Link to="/"  className="link"> Blog</Link>
+                    </li>
+                    <li>
+                        <Link to="/"  className="link"> Contact us</Link>
+                    </li>
+                </ul>
+                <div >
             <div>
-            <img src={"cart.svg"} alt="cart.svg" />
-            <img src={"user.svg"} alt="user.svg" />
+                <ul className="navbar-nav s-nav" style={{listStyle:'none'}}>
+                     <li className="icon"><img src={UserIcon} alt="User Icon"  /></li>
+                    <li className="icon"> <img src={CartIcon} alt="Cart Icon" /></li>
+                </ul>
+                
             </div>
           </div>
         </div>

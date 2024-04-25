@@ -8,6 +8,7 @@ import Product from './pages/Product';
 import Login from './pages/Login';
 import Shop from './pages/Shop';
 import Sign from './pages/Sign';
+import About from './pages/About';
 
 
 
@@ -17,12 +18,13 @@ function App() {
     <Routes>
       <Route path="/" element ={<Home/>}/> 
       <Route path="/cart" element ={<Cart/>}/>
-      {/* <Route path="/Checkout" element ={<Checkout/>}/>
-      <Route path="/History" element ={<History/>}/>
-      <Route path="/Product" element ={<Product/>}/>
-      <Route path="/Login" element ={<Login/>}/>
-      <Route path="/Shop" element ={<Shop/>}/>
-      <Route path="/Sign" element ={<Sign/>}/> */}
+      <Route path="/checkout" element ={<Checkout/>}/>
+      <Route path="/history" element ={<History/>}/>
+      <Route path="/product" element ={<Product/>}/>  
+      <Route path="/login" element ={<Login/>}/>
+      <Route path="/shop" element ={<Shop/>}/>
+      <Route path="/sign" element ={<Sign/>}/>
+      <Route path="/about" element ={<About/>}/>
     </Routes>
     </BrowserRouter>
   

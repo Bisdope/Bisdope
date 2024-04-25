@@ -1,9 +1,14 @@
 import Navbar from '../Components/Navbar';
+import './cart.css';
 const Cart=()=>{
     return(
         <>
         <Navbar />
-        <h1 style={{color: "red"}}>Hello sulaiman Welcome</h1>
+        <div className ="bodys" style={{display:'flex'}}>
+        <div className='modern'>
+          <h1>Cart</h1>
+        </div>
+            </div>
         </>
         
     );

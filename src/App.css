@@ -1,51 +1,82 @@
 .body{
   background-color:#3b5d50;
-  height: 600px;
+  height: 500px;
+  width: 100%;
 }
 .navbar-brand{
   color: white;
   font-size: 30px;
   padding-left: 100px;
+  font-weight: 500;
 }
 .span{
   color: rgba(255, 255, 255, 0.5) 
 }
-.navbar-nav{
+.img{
+  margin-left: 50px;
+  
+}
+.icon{
+  margin-right: 40px;
+}
+.navbar-nav{ 
 display: flex;
-float: right;
-margin-right:200px;
+margin-left:300px;
 color: rgba(255, 255, 255, 0.5)
 
 }
-.nav-items{
-  margin-right: 50px;
-  list-style: none;
-  font-size: 15px;
-  color: white;
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.nav-links li{
+  display: inline; 
+
+}
+
+.right-nav{
+  display: flex;
+}
+.links{
   border-bottom: yellow 5px solid;
   padding-bottom: 10px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 50px;
+
 }
-.nav-item{
-  margin-right: 50px;
- list-style: none;
- font-size: 15px;
+.shop-link{
+  text-decoration: none;
+  color: black;
  
+
 }
-.nav-item:hover{
+
+.link:hover{
   color: white;
   border-bottom: yellow 5px solid;
   padding-bottom: 10px;
+}
+
+.link{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 30px;
 }
 .collapse{
   padding-top: 30px;
 }
-p{
+
+.paragraph{
   color: rgba(255, 255, 255, 0.5);
   margin-left: 100px;
   font-size: 16px;
 }
 .modern{
-  width:600px;
+  width:40%;
   font-size: 20px;
 }
 h1{
@@ -56,6 +87,42 @@ h1{
 }
 .button{
   margin-left: 100px;
+}
+.Ones{
+  width: 100px;
+  height: 40px;
+  border-radius: 50px;
+  font-size: 10px;
+  border-style: none;
+  font-weight: 700;
+}
+.Twos{
+  width: 100px;
+  height: 40px;
+  border-radius: 50px;
+  font-size: 10px;
+  background-color:#3b5d50 ;
+  color: white;
+  font-weight: 700;
+  margin-left: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  outline: none;
+}
+.Two:hover{
+  border-color: white;
+}
+.contain{
+  position: relative;
+}
+.dots {
+  position: absolute;
+  height: 217px;
+  left: 64%;
+  top: 40px;
+}
+.img{
+  position: relative;
+  z-index: 10;
 }
 .One{
   width: 150px;
@@ -78,6 +145,17 @@ h1{
   border: 2px solid rgba(255, 255, 255, 0.5);
   outline: none;
 }
-.Two:hover{
-  border-color: white;
+.buttons{
+  /* display: none; */
+  padding-left: 20px;
 }
+.Two:hover{
+  border-color: white;}
+ .cards{
+  background-color: antiquewhite;
+  padding-left: 30px;
+  justify-content: center;
+ } 
+ .lower{
+  margin-top: 20px;
+ }

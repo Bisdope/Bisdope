@@ -1,10 +1,9 @@
 import Navbar from "../Components/Navbar";
-const Product =() =>{
-    return (
+const About=()=>{
+    return(
         <>
         <Navbar/>
-        
         </>
     );
 }
-export default Product;
+export default About;
