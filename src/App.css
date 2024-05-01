@@ -146,16 +146,293 @@ h1{
   outline: none;
 }
 .buttons{
-  /* display: none; */
-  padding-left: 20px;
+  display: none;
+  padding-left: 30px;
+  position: absolute;
+  
 }
 .Two:hover{
   border-color: white;}
- .cards{
+ .product-card{
   background-color: antiquewhite;
-  padding-left: 30px;
+  /* padding-left: 30px; */
   justify-content: center;
  } 
  .lower{
-  margin-top: 20px;
+  margin-top: 60px;
+  margin-left: 30px;
+  height: 25%;
  }
+ .product-card .overlay{
+  background-color: aquamarine;
+  height: 100%;
+  width: 100%;
+  padding-left: 30px;
+  position: absolute;
+  opacity: 0.5;
+  display: none;
+ }
+ .product-card-upper{
+  width: 100%;
+  height: 75%;
+  position: relative;
+  transition: transition 0.3s ease;
+ }
+ .product-card-upper:hover .overlay{
+  display: block;
+
+ }
+ .product-card-upper:hover .buttons{
+  display: block;
+ }
+ .image:hover{
+  transform: scale(1.2);
+ }
+ .cart-badge{
+  top: -5px;
+  right: -10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .explore{
+  width: 120px;
+  height: 40px;
+  border-radius: 50px;
+  outline: none;
+  color: antiquewhite;
+  background-color: black;
+ }
+ .chairs_img{
+  width: 280px;
+  height: 350px;
+  padding-top: 100px;
+ }
+ .cart{
+  /* background-color: red; */
+  width: 100%;
+  height: 1200px;
+  /* margin-top: -50px; */
+}
+
+/* hr{
+  width: 90%;
+  color: black;
+  margin-top: 30px;
+} */
+
+/* .cart-line{
+  margin-top: 40px;
+  background-color: green;
+
+} */
+.full-width-hr2{
+   
+    width: 85%;
+    /* margin-left: 60px; */
+    /* margin-top: 190px; */
+    border: 1px solid black;
+
+}
+.full-width-hr3{
+  margin-top: 20px;
+  
+  width: 85%;
+  /* margin-left: 60px; */
+  /* margin-top: 190px; */
+  border: 1px solid rgb(231, 226, 226);
+
+}
+
+
+.listing{
+  display: flex;
+  margin-top: 150px;
+  margin-left: 35px;
+
+  /* justify-content: space-between; */
+ 
+}
+.list-table{
+  margin-left: 133px;
+}
+.details{
+  display: flex;
+  margin-top: 20px;
+  margin-left: 100px;
+}
+.small-chair{
+  width: 170px;
+  height: 170px;
+}
+.rows{
+  margin-left: 70px;
+  margin-top: 40px;
+  font-size: 22px;
+  font-weight: 500;
+}
+.dollar{
+  color: grey;
+  font-size: 17px;
+  margin-left: 127px;
+  margin-top: 45px;
+
+}
+.dollar1{
+  color: black;
+  font-size: 17px;
+  margin-left: 127px;
+  margin-top: 45px;
+
+}
+.semi-div{
+  /* display: flex;
+  justify-content: space-evenly; */
+  margin-left: 100px;
+  margin-top: 30px;
+}
+.cart-qty-control{
+  font-size: 20px;
+  cursor: pointer;
+
+
+  /* margin-left: 200px; */
+}
+.figure{
+  
+  border: 1px solid rgb(88, 88, 88);
+  width: 60px;
+  height: 50px;
+  margin-left: 10px;
+  margin-right: 10px; 
+}
+
+.third-line{
+  display: flex;
+  
+
+}
+.but5{
+  width: 160px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  border-style: none;
+  margin-left: 90px;
+  margin-top: 60px;
+
+}
+
+.but6{
+  width: 180px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  border-style: none;
+  margin-left: 140px;
+  margin-top: 60px;
+
+}
+.cart-total{
+  display: block;
+  margin-top: 40px;
+  margin-left: 345px;
+
+}
+ .cart-total-text{
+  font-weight: 400;
+  
+ 
+
+}
+.small-hr{
+  width: 335px;
+  border:  1px solid rgb(231, 226, 226)
+}
+.final-div{
+  display: flex;
+  margin-left: 95px;
+}
+.first-final{
+  display: block;
+  width: 70%;
+
+}
+.second-final{
+  width: 30px;
+}
+.coupon-text{
+  color: grey;
+  font-size: 15px;
+
+}
+.coups{
+  margin-left: -20px;
+}
+.coupon{
+  font-size: 20px;
+  font-weight: 500;
+}
+.coup{
+  width: 400px;
+  height: 30px;
+  color: grey;
+  border-radius: 10px;
+  border-color: grey;
+  background-color: transparent;
+}
+.but7{
+  width: 160px;
+  height: 80px;
+  border-radius: 30px;
+  font-size: 17px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  border-style: none;
+  margin-left: 30px;
+ 
+
+}
+.price-flex{
+  display: flex;
+  margin-left: -50px;
+
+}
+.price-total{
+  color: grey;
+  font-size: 17px;
+  font-weight: 400;
+  margin-right: 120px;
+  margin-top: 25px;
+}
+.price-figure{
+color: black;
+font-size: 17px;
+font-weight: 600;
+margin-top: 25px;
+}
+.price-total2{
+color: grey;
+font-size: 17px;
+font-weight: 400;
+margin-right: 150px;
+margin-top: 15px;
+}
+.price-figure2{
+color: black;
+font-size: 17px;
+font-weight: 600;
+margin-top: 15px;
+}
+ 
