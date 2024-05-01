@@ -32,7 +32,7 @@ const Product = () => {
 
   return (
     <>
-      <Navbar cart={cart} />
+      <Navbar cart={cart} setCart={setCart}/>
       <div className="bodys" style={{ display: 'flex', width: "100%" }}>
         <div className='modern'>
           <h1>Products</h1>

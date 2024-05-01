@@ -1,14 +1,15 @@
-import {  useState } from "react";
+import {  useEffect, useState } from "react";
 import { Link, json } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import ChairImg from '../Assets/images/chair1.png';
 import ChairsImg from '../Assets/images/chair 2.png';
 import ChairssImg from '../Assets/images/chair 4.png';
 import Sidebar from "../Components/Sidebar";
-import { all_products } from "../utils/products";
 import Product from "./Product";
+import { allProducts } from "../services/apis";
 const Shop=()=>{
     const [cart , setCart] = useState([]);
+    const [products, setProducts] = useState([]);
 
     const increaseQtyInCart = (product_id) => {
       let cartClone = [...cart]
@@ -37,7 +38,7 @@ const Shop=()=>{
       console.log(productIndexInCart);
       currentCart[productIndexInCart].quantity += 1
      }else{
-      let target_product = all_products.find((product)=>{
+      let target_product = products.find((product)=>{
         return product.id === product_id
       });
       if(target_product){
@@ -49,6 +50,17 @@ const Shop=()=>{
      setCart(currentCart);
      localStorage.setItem('cart',JSON.stringify(currentCart))
     }
+
+    const getProducts = async () => {
+      const get_products = await allProducts();
+      if(get_products?.length > 0){
+        setProducts(get_products)
+      }
+    }
+
+    useEffect(()=>{
+      getProducts();
+    },[]);
  
     return(
       <>
@@ -63,29 +75,31 @@ const Shop=()=>{
         <Sidebar/>
           <div className="col-md-9 content " style={{justifyContent:"space-between"}}>
             <div className="row ">
-              {
-                all_products.map((product,index)=>(
+              {products?.length > 0 ?
+                products.map((product,index)=>(
                   <div className="col-md-4 px-2 py-2" key={index}>
-                <div className="product-card" style={{height:"400px" }}>
-                  <div className="product-card-upper">
-                    <div className="overlay"></div>
-                       <img src={product.cover_photo} alt ='Chair Image'  style={{height:"200px"}} className="image"/>
-                      <div className="buttons">
-                        <button className='Ones' onClick={()=>{
-                          addToCart(product.id)
-                        }}>Add to cart</button>
-                        <button className='Twos'>Buy now</button>
-                      </div> 
-                      <div className="lower">
-                        <p>{product.name}</p>
-                        <h5>${product.price}</h5>
+                    <div className="product-card" style={{height:"400px" }}>
+                      <div className="product-card-upper">
+                        <div className="overlay"></div>
+                          <img src={product.cover_photo} alt ='Chair Image'  style={{height:"200px"}} className="image"/>
+                          <div className="buttons">
+                            <button className='Ones' onClick={()=>{
+                              addToCart(product.id)
+                            }}>Add to cart</button>
+                            <button className='Twos'>Buy now</button>
+                          </div> 
+                          <div className="lower">
+                            <p>{product.name}</p>
+                            <h5>${product.price}</h5>
+                          </div>
                       </div>
-                   </div>
-                
-                 
-                  </div>
-              </div>  
+                    
+                    
+                      </div>
+                  </div>  
                 ))
+              :
+                <div className="text-danger text-center">No Products found</div>
               }
             </div>
           </div>
