@@ -7,7 +7,7 @@ import History from './pages/History';
 import Product from './pages/Product';
 import Login from './pages/Login';
 import Shop from './pages/Shop';
-import Sign from './pages/Sign';
+
 import About from './pages/About';
 
 

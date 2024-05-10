@@ -70,9 +70,9 @@ const Cart = ()=>{
         <div key={index}>
 
             <div className="details">
-          <img src={item?.cover_photo}alt="chair" className="small-chair" />
-          <h3 className="rows">{item?.name}</h3>
-          <p className="dollar">${item?.price}</p>
+          <img src={item?.image}alt="chair" className="small-chair" />
+          <h3 className="rows">{item?.title}</h3>
+          <p className="dollar">${item?.price.toFixed(2)}</p>
           <div className="semi-div">
              <span className="cart-qty-control"  onClick={()=>decreaseQtyInCart(item?.id)}>-</span>
              <button className="figure">{item?.quantity}</button>
@@ -123,7 +123,7 @@ const Cart = ()=>{
              <p className="price-figure2">${sumCartTotal(cart)}</p>
              </div>
  
-             <Link to = "/"> <button className ="but6">Proceed To Checkout</button></Link>
+             <Link to = "/Checkout"> <button className ="but6">Proceed To Checkout</button></Link>
  
  
           </div>
